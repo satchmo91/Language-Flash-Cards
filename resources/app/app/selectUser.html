@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/myStyle.css" />
+    <title>Select User</title>
+  </head>
+  <body class="container" style="position: relative; height: 100%;">
+    <div class="container">
+      <!-- Header Text -->
+      <div class="container">
+        <h1 class="text-center">Select A User</h1>
+        <hr />
+      </div>
+
+      <!-- Select User -->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">User</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect"></select>
+      </div>
+      <br />
+      <button class="btn-block btn btn-primary" id="userSelectButton">
+        Select
+      </button>
+    </div>
+    <script type="module" src="./scripts/selectUserScript.js"></script>
+  </body>
+</html>

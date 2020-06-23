@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/myStyle.css" />
+    <title id="title">Language Flash Cards</title>
+  </head>
+  <body
+    class="container"
+    style="position: relative; height: 100%; width: 100%;"
+  >
+    <button
+      class="btn-outline-primary"
+      style="position: absolute; top: 10%; right: 10%;"
+      id="vocabularyButton"
+      destination="vocabulary"
+    >
+      TEST
+    </button>
+    <div class="container" style="position: absolute; top: 25%;">
+      <!-- Text Info -->
+      <div class="container">
+        <h1 class="text-center">Language Flash Cards</h1>
+        <h4 class="text-center">Please select an option</h4>
+        <hr />
+      </div>
+
+      <!-- Buttons -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="nativeToForeign"
+              destination="flashCards"
+              language="foreign"
+            >
+              Native to Foreign
+            </button>
+          </div>
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="foreignToNative"
+              destination="flashCards"
+              language="native"
+            >
+              Foreign to Native
+            </button>
+          </div>
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="addNewWordsPage"
+              destination="addNewWordsPage"
+            >
+              New Words Page
+            </button>
+          </div>
+        </div>
+        <br />
+        <div class="container">
+          <h5
+            class="text-center"
+            id="submitAlert"
+            style="margin: 0; height: 25px;"
+          ></h5>
+        </div>
+
+        <!-- tags -->
+
+        <div class="container" id="tagContainer">
+          <div class="form-check form-check-inline">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="all"
+              value="all"
+            />
+            <label class="form-check-label">All</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img
+      src="./assets/img/unmute.png"
+      style="
+        position: fixed;
+        height: 30px;
+        width: 30px;
+        right: 20px;
+        bottom: 20px;
+      "
+      id="muteIndicator"
+    /> -->
+
+    <script type="module" src="./scripts/indexScript.js"></script>
+  </body>
+</html>

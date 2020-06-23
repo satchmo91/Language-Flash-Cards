@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/myStyle.css" />
+    <title id="title">Language Flash Cards</title>
+  </head>
+  <body
+    class="container"
+    style="position: relative; height: 100%; width: 100%;"
+  >
+    <div class="container" style="position: absolute; top: 25%;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="mainMenu"
+              destination="index"
+              language="native"
+            >
+              Main Menu
+            </button>
+          </div>
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="addNewWordsPage"
+              destination="addNewWordsPage"
+            >
+              New Words Page
+            </button>
+          </div>
+        </div>
+        <br />
+        <div class="container">
+          <h5
+            class="text-center"
+            id="submitAlert"
+            style="margin: 0; height: 25px;"
+          ></h5>
+        </div>
+
+        <!-- Text Info -->
+        <div class="container">
+          <h1 class="text-center">Your Vocabulary</h1>
+          <h5>
+            Double-click to edit word, right click to quickly delete words.
+            Careful! There is no undo at the moment!
+          </h5>
+          <hr />
+        </div>
+
+        <table class="table table-sm table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Foreign</th>
+              <th scope="col">Native</th>
+              <th scope="col">Tags</th>
+            </tr>
+          </thead>
+          <tbody id="table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type="module" src="./scripts/vocabularyScript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/myStyle.css" />
+    <title id="title">Language Flash Cards</title>
+  </head>
+  <body class="container" style="position: relative; height: 100%;">
+    <div class="container" style="position: absolute; top: 25%;">
+      <!-- Top Text -->
+      <div class="container">
+        <h1 class="text-center" id="mainText"></h1>
+        <br />
+        <h1 class="text-center border border-info" id="card"></h1>
+        <hr />
+      </div>
+
+      <!-- Input fields -->
+      <div class="container">
+        <div class="row">
+          <div class="col-8 text-center">
+            <input class="form-control" type="text" id="guess" />
+          </div>
+          <div class="col-4 text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="submitGuess"
+              style="height: 100%;"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+
+      <!-- Navigation -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="mainMenuButton"
+              destination="index"
+            >
+              Main Menu
+            </button>
+          </div>
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="addNewWordsPageButton"
+              destination="addNewWordsPage"
+            >
+              New Words Page
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img
+      src="./assets/img/unmute.png"
+      style="
+        position: fixed;
+        height: 30px;
+        width: 30px;
+        right: 20px;
+        bottom: 20px;
+      "
+      id="muteIndicator"
+    /> -->
+
+    <audio src="./assets/sounds/correct.mp3" id="correctChime"></audio>
+    <audio src="./assets/sounds/incorrect.mp3" id="incorrectChime"></audio>
+
+    <script type="module" src="./scripts/flashCardsScript.js"></script>
+  </body>
+</html>

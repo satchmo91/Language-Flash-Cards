@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" style="height: 100%;">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/tags-input.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="./css/tags-input.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/myStyle.css" />
+    <title id="title">Language Flash Cards</title>
+  </head>
+  <body class="container" style="position: relative; height: 100%;">
+    <button
+      class="btn-outline-primary"
+      style="position: absolute; top: 10%; right: 10%;"
+      id="vocabularyButton"
+      destination="vocabulary"
+    ></button>
+    <div class="container" style="position: absolute; top: 25%;">
+      <!-- Header and Instructions -->
+      <div class="container">
+        <h1 class="text-center">Add New Words</h1>
+        <h5 class="text-center">
+          Foreign and Native words are necessary, comma-seperated tags are
+          optional
+        </h5>
+        <hr />
+        <br />
+      </div>
+
+      <!-- Text Fields -->
+      <div class="container">
+        <h5
+          class="text-center"
+          id="submitAlert"
+          style="margin: 0; height: 25px;"
+        ></h5>
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-sm text-center">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Foreign Word"
+              id="foreignWordInput"
+            />
+          </div>
+          <div class="col-sm text-center">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Native Word"
+              id="nativeWordInput"
+            />
+          </div>
+          <div class="col-sm text-center">
+            <input
+              type="tags"
+              class="form-control tag tag-primary"
+              placeholder="Tags"
+              id="tagsInput"
+              style="height: 100%;"
+            />
+          </div>
+        </div>
+        <br />
+
+        <!-- Submit Button -->
+        <div class="row">
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="submitWordPairButton"
+              destination="addNewWordsPage"
+              style="height: 100%;"
+            >
+              Submit Word Pair
+            </button>
+          </div>
+        </div>
+        <br />
+
+        <!-- Home Button -->
+        <div class="row">
+          <div class="col-sm text-center">
+            <button
+              class="btn-outline-primary btn-block"
+              id="homeButton"
+              destination="index"
+              style="height: 100%;"
+            >
+              Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <img
+      src="./assets/img/unmute.png"
+      style="
+        position: fixed;
+        height: 30px;
+        width: 30px;
+        right: 20px;
+        bottom: 20px;
+      "
+      id="muteIndicator"
+    /> -->
+
+    <audio src="./assets/sounds/newWordChime.mp3" id="newWordChime"></audio>
+    <audio src="./assets/sounds/incorrect.mp3" id="incorrectChime"></audio>
+    <script src="./scripts/tags-input.js"></script>
+    <script>
+      [].forEach.call(
+        document.querySelectorAll('input[type="tags"]'),
+        tagsInput
+      );
+    </script>
+    <script type="module" src="./scripts/addNewWordsScript.js"></script>
+  </body>
+</html>
